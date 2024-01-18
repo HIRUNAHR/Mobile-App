@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1054252895737",
+    "project_id": "explore-net-new",
+    "storage_bucket": "explore-net-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054252895737:android:3f5058e1eaa56735b5c128",
+        "android_client_info": {
+          "package_name": "com.example.new_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDosc2d2fvjriLe3JYM63ScxUPAjKeCbSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
