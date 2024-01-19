@@ -13,49 +13,50 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           // Carousel Slider
-          Positioned.fill(
-            child: CarouselSlider(
-              items: [
-                "assets/images/Mountains.jpg",
-                "assets/images/ketu.jpg",
-                "assets/images/rivers.jpg",
-                // Add more images as needed
-              ].map((imagePath) {
-                return Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
-                );
-              }).toList(),
-              options: CarouselOptions(
-                height: double.infinity,
-                viewportFraction: 1.0,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 2),
-                autoPlayAnimationDuration: Duration(milliseconds: 500),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                pauseAutoPlayOnTouch: true,
-                aspectRatio: 2.0,
-              ),
+          CarouselSlider(
+            items: [
+              "assets/images/Mountains.jpg",
+              "assets/images/ketu.jpg",
+              "assets/images/rivers.jpg",
+              // Add more images as needed
+            ].map((imagePath) {
+              return Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              );
+            }).toList(),
+            options: CarouselOptions(
+              height: double.infinity,
+              viewportFraction: 1.0,
+              autoPlay: true,
+              autoPlayInterval: Duration(seconds: 2),
+              autoPlayAnimationDuration: Duration(milliseconds: 500),
+              autoPlayCurve: Curves.fastOutSlowIn,
+              pauseAutoPlayOnTouch: true,
+              aspectRatio: 2.0,
             ),
           ),
           // Content
-          Column(
-            children: [
-              // First row of tiles
-              _buildRow(context, [
-                _buildTile(context, "Locations", AppRoutes.categoriesScreen),
-                _buildTile(context, "Images", AppRoutes.imagesContainerScreen),
-              ]),
-              // Second row of tiles
-              _buildRow(context, [
-                _buildTile(context, "Contact Us", AppRoutes.contactUs),
-                _buildTile(context, "Rate Us", AppRoutes.rateUs),
-              ]),
-              // Spacer to push the footer to the bottom
-              Spacer(),
-              // Footer
-              _buildFooter(),
-            ],
+          Positioned.fill(
+            child: Column(
+              children: [
+                // First row of tiles
+                _buildRow(context, [
+                  _buildTile(context, "Locations", AppRoutes.categoriesScreen),
+                  _buildTile(
+                      context, "Images", AppRoutes.imagesContainerScreen),
+                ]),
+                // Second row of tiles
+                _buildRow(context, [
+                  _buildTile(context, "Contact Us", AppRoutes.contactUs),
+                  _buildTile(context, "Rate Us", AppRoutes.rateUs),
+                ]),
+                // Spacer to push the footer to the bottom
+                Spacer(),
+                // Footer
+                _buildFooter(),
+              ],
+            ),
           ),
         ],
       ),
